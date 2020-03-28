@@ -1,6 +1,11 @@
 import { Module } from '@nestjs/common';
+import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
-  imports: [],
+  imports: [
+    GraphQLModule.forRoot({
+      autoSchemaFile: true
+    })
+  ],
 })
 export class AppModule {}
