@@ -33,7 +33,8 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
-    "typeorm": "^0.2.24"
+    "typeorm": "^0.2.24",
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.13.2",
