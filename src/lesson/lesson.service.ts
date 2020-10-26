@@ -15,14 +15,10 @@ export class LessonService {
     return this.lessonRepository.findOne({ id });
   }
 
-  async createLesson(createLessonInput: CreateLessonInput): Promise<Lesson> {
-    const { name, startDate, endDate } = createLessonInput;
-    
+  async createLesson(createLessonInput: CreateLessonInput): Promise<Lesson> {  
     const lesson = this.lessonRepository.create({
       id: uuid(),
-      name,
-      startDate,
-      endDate
+      ...createLessonInput
     });
 
     return this.lessonRepository.save(lesson);
